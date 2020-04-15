@@ -1,4 +1,4 @@
-package it.intersistemi.corso.controller;
+package it.intersistemi.spring.controller;
 
 import it.intersistemi.corso.service.CrudService;
 import org.springframework.ui.Model;
@@ -15,7 +15,7 @@ public abstract class CrudController<DTO, PK, S extends CrudService<DTO, PK>> {
         this.service = service;
     }
 
-    @RequestMapping(method=RequestMethod.GET)
+    @RequestMapping(method = RequestMethod.GET)
     public String showlist(Model model) {
         Iterable<DTO> entityList = this.service.findAll();
         model.addAttribute(this.getEntityListModelName(), entityList);
@@ -56,13 +56,13 @@ public abstract class CrudController<DTO, PK, S extends CrudService<DTO, PK>> {
     @RequestMapping(value="/{id}/edit", method=RequestMethod.POST)
     public String saveEntity(@PathVariable("id") PK id, DTO dto, Model model) {
         this.service.update(id, dto);
-        return "redirect:"+this.getListUrl();
+        return "redirect:" + this.getListUrl();
     }
 
     @RequestMapping(value="/{id}/delete", method=RequestMethod.GET)
     public String deleteEntity(@PathVariable("id") PK id, Model model) {
         this.service.deleteById(id);
-        return "redirect:"+this.getListUrl();
+        return "redirect:" + this.getListUrl();
     }
 
     protected abstract String getEntityListModelName();
@@ -78,3 +78,4 @@ public abstract class CrudController<DTO, PK, S extends CrudService<DTO, PK>> {
     protected abstract String getListUrl();
 
 }
+

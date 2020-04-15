@@ -1,16 +1,17 @@
-package it.intersistemi.springframework.users.service.jpa.impl;
+package it.intersistemi.corso.service.jpa;
 
-import it.intersistemi.springframework.users.dao.jpa.AuthorityRepository;
-import it.intersistemi.springframework.users.dao.jpa.entity.Authority;
-import it.intersistemi.springframework.users.model.AuthorityDto;
-import it.intersistemi.springframework.users.service.CrudService;
+import it.intersistemi.corso.repository.AuthorityRepository;
+import it.intersistemi.corso.model.entity.jpa.Authority;
+import it.intersistemi.corso.dto.AuthorityDto;
+import it.intersistemi.corso.service.AuthorityService;
+import it.intersistemi.corso.mapper.AuthorityMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 @Service
 public class AuthorityServiceJpaImpl
 	extends AbstractCrudServiceJpaImpl<Authority, String, AuthorityDto, AuthorityRepository, AuthorityMapper>
-	implements CrudService<AuthorityDto, String> {
+	implements AuthorityService {
 
 	@Autowired
 	public AuthorityServiceJpaImpl(AuthorityRepository repository, AuthorityMapper mapper) {

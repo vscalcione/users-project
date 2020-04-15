@@ -1,5 +1,7 @@
-package it.intersistemi.springframework.users.service.jpa.impl;
+package it.intersistemi.corso.service.jpa;
 
+import it.intersistemi.corso.service.CrudService;
+import it.intersistemi.corso.mapper.EntityDtoMapper;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.transaction.annotation.Transactional;
 

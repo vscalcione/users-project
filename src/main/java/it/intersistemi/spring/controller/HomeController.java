@@ -1,4 +1,4 @@
-package it.intersistemi.corso.controller;
+package it.intersistemi.spring.controller;
 
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Controller;
@@ -10,9 +10,9 @@ public class HomeController {
 
     @RequestMapping("")
     public String homePage(Model model) {
-        String userName = SecurityContextHolder.getContext().getAuthentication().getName();
+        String userName = SecurityContextHolder
+                .getContext().getAuthentication().getName();
         model.addAttribute("userName", userName);
         return "home";
     }
 }
-
