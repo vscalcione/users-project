@@ -9,6 +9,16 @@ public class ActivityDto {
 	private Date startDate;
 	private String activityName;
 
+	public ActivityDto() {
+	}
+
+	public ActivityDto(String idActivity, Date endDate, Date startDate, String activityName) {
+		this.idActivity = idActivity;
+		this.endDate = endDate;
+		this.startDate = startDate;
+		this.activityName = activityName;
+	}
+
 	public String getIdActivity() {
 		return idActivity;
 	}

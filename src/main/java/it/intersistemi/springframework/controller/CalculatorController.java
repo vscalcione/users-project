@@ -22,38 +22,28 @@ public class CalculatorController {
         return "calculator";
     }
 
-    @RequestMapping(params="sottrai")
-    public String sottrai(@RequestParam(name="op1", required=true) int op1, @RequestParam(name="op2", required=true) int op2, Model model) {
-        int risultato = op1 - op2;
-        model.addAttribute("operazione", "Differenza");
-        model.addAttribute("risultato", risultato);
-        return "calcolatrice";
+    @RequestMapping(params = "difference")
+    public String difference(@RequestParam(name="value1", required=true) int value1, @RequestParam(name="value2", required=true) int value2, Model model) {
+        int result = value1 - value2;
+        model.addAttribute("operation", "Difference");
+        model.addAttribute("result", result);
+        return "calculator";
     }
 
-    //	@RequestMapping("/moltiplica")
-    @RequestMapping(params="moltiplica")
-    public String moltiplica(
-            @RequestParam(name="op1", required=true) int op1,
-            @RequestParam(name="op2", required=true) int op2,
-            Model model
-    ) {
-        int risultato = op1 * op2;
-        model.addAttribute("operazione", "Moltiplicazione");
-        model.addAttribute("risultato", risultato);
-        return "calcolatrice";
+    @RequestMapping(params = "product")
+    public String product(@RequestParam(name="value1", required=true) int value1, @RequestParam(name="value2", required=true) int value2, Model model) {
+        int result = value1 * value2;
+        model.addAttribute("operation", "Product");
+        model.addAttribute("result", result);
+        return "calculator";
     }
 
-    //	@RequestMapping("/dividi")
-    @RequestMapping(params="dividi")
-    public String dividi(
-            @RequestParam(name="op1", required=true) int op1,
-            @RequestParam(name="op2", required=true) int op2,
-            Model model
-    ) {
-        int risultato = op1 / op2;
-        model.addAttribute("operazione", "Divisione");
-        model.addAttribute("risultato", risultato);
-        return "calcolatrice";
+    @RequestMapping(params = "quozient")
+    public String quozient(@RequestParam(name="value1", required=true) int value1, @RequestParam(name="value2", required=true) int value2, Model model) {
+        int result = value1 / value2;
+        model.addAttribute("operation", "Quozient");
+        model.addAttribute("result", result);
+        return "calculator";
     }
 
 }

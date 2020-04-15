@@ -6,6 +6,15 @@ public class EmployeeDto {
 	private String employeeSurname;
 	private String employeeName;
 
+	public EmployeeDto() {
+	}
+
+	public EmployeeDto(Integer idEmployee, String employeeSurname, String employeeName) {
+		this.idEmployee = idEmployee;
+		this.employeeSurname = employeeSurname;
+		this.employeeName = employeeName;
+	}
+
 	public Integer getIdEmployee() {
 		return idEmployee;
 	}

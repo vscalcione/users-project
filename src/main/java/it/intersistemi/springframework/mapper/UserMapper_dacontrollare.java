@@ -1,7 +1,6 @@
 package it.intersistemi.springframework.mapper;
 
 import it.intersistemi.springframework.dao.jpa.User_dacontrollare;
-import it.intersistemi.springframework.dto.UserDTO;
 
 public class UserMapper_dacontrollare implements EntityToDtoMapper<UserDTO, User_dacontrollare> {
 
