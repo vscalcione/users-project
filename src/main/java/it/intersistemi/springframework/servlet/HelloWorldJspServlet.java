@@ -19,7 +19,6 @@ public class HelloWorldJspServlet extends HttpServlet {
 		} else {
 			helloMessage = "Hello World!!!";
 		}
-
 		request.setAttribute("who", who);
 		request.setAttribute("helloMessage", helloMessage);
 		request.getRequestDispatcher("/index.jsp").forward(request, response);

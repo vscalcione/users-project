@@ -1,6 +1,7 @@
 package it.intersistemi.springframework.service.jdbc;
 
-import it.intersistemi.springframework.users.dao.jdbc.CrudRepository;
+import it.intersistemi.springframework.dao.jdbc.CrudRepository;
+import it.intersistemi.springframework.service.CrudService;
 import org.springframework.transaction.annotation.Transactional;
 
 public abstract class AbstractCrudServiceJdbcImpl<DTO, PK, R extends CrudRepository<DTO, PK>> implements CrudService<DTO, PK> {

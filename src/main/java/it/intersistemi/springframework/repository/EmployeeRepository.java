@@ -1,10 +1,10 @@
 package it.intersistemi.springframework.repository;
 
-import it.intersistemi.springframework.gestioneAttivita.entity.Dipendente;
+import it.intersistemi.springframework.dao.jpa.Employee;
 import org.springframework.data.repository.CrudRepository;
 
-public interface EmployeeRepository extends CrudRepository<Dipendente, Integer>{
+public interface EmployeeRepository extends CrudRepository<Employee, Integer> {
 
-	Iterable<Dipendente> findByAttivitasIdAttivita(String idAttivita);
+	Iterable<Employee> findByActivitiesIdActivity(String idActivity);
 
 }

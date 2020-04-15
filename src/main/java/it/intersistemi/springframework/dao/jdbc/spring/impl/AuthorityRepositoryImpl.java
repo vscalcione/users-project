@@ -2,7 +2,7 @@ package it.intersistemi.springframework.dao.jdbc.spring.impl;
 
 import it.intersistemi.springframework.dao.jdbc.AuthorityRepository;
 import it.intersistemi.springframework.dao.jdbc.spring.mapper.AuthorityMapper;
-import it.intersistemi.springframework.users.model.AuthorityDto;
+import it.intersistemi.springframework.dto.AuthorityDto;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.namedparam.BeanPropertySqlParameterSource;

@@ -1,7 +1,7 @@
 package it.intersistemi.springframework.dao.jdbc;
 
-import it.intersistemi.springframework.users.model.AuthorityDto;
-import it.intersistemi.springframework.users.model.UserDto;
+import it.intersistemi.springframework.dto.AuthorityDto;
+import it.intersistemi.springframework.dto.UserDto;
 
 import java.util.List;
 

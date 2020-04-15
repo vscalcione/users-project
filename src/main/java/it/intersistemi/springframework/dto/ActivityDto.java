@@ -3,41 +3,41 @@ package it.intersistemi.springframework.dto;
 import java.util.Date;
 
 public class ActivityDto {
-	private String idAttivita;
-	private Date dataFine;
-	private Date dataInizio;
-	private String nomeAttivita;
 
-	public String getIdAttivita() {
-		return idAttivita;
+	private String idActivity;
+	private Date endDate;
+	private Date startDate;
+	private String activityName;
+
+	public String getIdActivity() {
+		return idActivity;
 	}
 
-	public void setIdAttivita(String idAttivita) {
-		this.idAttivita = idAttivita;
+	public void setIdActivity(String idActivity) {
+		this.idActivity = idActivity;
 	}
 
-	public Date getDataFine() {
-		return dataFine;
+	public Date getEndDate() {
+		return endDate;
 	}
 
-	public void setDataFine(Date dataFine) {
-		this.dataFine = dataFine;
+	public void setEndDate(Date endDate) {
+		this.endDate = endDate;
 	}
 
-	public Date getDataInizio() {
-		return dataInizio;
+	public Date getStartDate() {
+		return startDate;
 	}
 
-	public void setDataInizio(Date dataInizio) {
-		this.dataInizio = dataInizio;
+	public void setStartDate(Date startDate) {
+		this.startDate = startDate;
 	}
 
-	public String getNomeAttivita() {
-		return nomeAttivita;
+	public String getActivityName() {
+		return activityName;
 	}
 
-	public void setNomeAttivita(String nomeAttivita) {
-		this.nomeAttivita = nomeAttivita;
+	public void setActivityName(String activityName) {
+		this.activityName = activityName;
 	}
-
 }

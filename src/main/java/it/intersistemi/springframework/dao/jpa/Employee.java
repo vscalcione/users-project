@@ -5,64 +5,60 @@ import java.io.Serializable;
 import java.util.Set;
 
 
-/**
- * The persistent class for the DIPENDENTE database table.
- *
- */
 @Entity
-@Table(name="DIPENDENTE")
-@NamedQuery(name="Dipendente.findAll", query="SELECT d FROM Dipendente d")
+@Table(name="EMPLOYEE")
+@NamedQuery(name="Employee.findAll", query="SELECT e FROM Employee e")
 public class Employee implements Serializable {
+
 	private static final long serialVersionUID = 1L;
 
 	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO)
-	@Column(name="ID_MATRICOLA", unique=true, nullable=false)
-	private Integer idMatricola;
+	@Column(name="ID_EMPLOYEE", unique=true, nullable=false)
+	private Integer idEmployee;
 
-	@Column(length=100)
-	private String cognome;
+	@Column(name="EMPLOYEE_SURNAME", length=100)
+	private String employeeSurname;
 
-	@Column(nullable=false, length=100)
-	private String nome;
+	@Column(name="EMPLOYEE_NAME", nullable=false, length=100)
+	private String employeeName;
 
 	//bi-directional many-to-many association to Attivita
-	@ManyToMany(mappedBy="dipendentes")
-	private Set<Activity> attivitas;
+	@ManyToMany(mappedBy="employees")
+	private Set<Activity> activities;
 
 	public Employee() {
 	}
 
-	public Integer getIdMatricola() {
-		return this.idMatricola;
+	public Integer getIdEmployee() {
+		return idEmployee;
 	}
 
-	public void setIdMatricola(Integer idMatricola) {
-		this.idMatricola = idMatricola;
+	public void setIdEmployee(Integer idEmployee) {
+		this.idEmployee = idEmployee;
 	}
 
-	public String getCognome() {
-		return this.cognome;
+	public String getEmployeeSurname() {
+		return employeeSurname;
 	}
 
-	public void setCognome(String cognome) {
-		this.cognome = cognome;
+	public void setEmployeeSurname(String employeeSurname) {
+		this.employeeSurname = employeeSurname;
 	}
 
-	public String getNome() {
-		return this.nome;
+	public String getEmployeeName() {
+		return employeeName;
 	}
 
-	public void setNome(String nome) {
-		this.nome = nome;
+	public void setEmployeeName(String employeeName) {
+		this.employeeName = employeeName;
 	}
 
-	public Set<Activity> getAttivitas() {
-		return this.attivitas;
+	public Set<Activity> getActivities() {
+		return activities;
 	}
 
-	public void setAttivitas(Set<Activity> attivitas) {
-		this.attivitas = attivitas;
+	public void setActivities(Set<Activity> activities) {
+		this.activities = activities;
 	}
-
 }

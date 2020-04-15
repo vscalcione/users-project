@@ -11,29 +11,19 @@ public class CalculatorController {
 
     @RequestMapping
     public String form() {
-        return "calcolatrice";
+        return "calculator";
     }
 
-    //	@RequestMapping("/somma")
-    @RequestMapping(params="somma")
-    public String somma(
-            @RequestParam(name="op1", required=true) int op1,
-            @RequestParam(name="op2", required=true) int op2,
-            Model model
-    ) {
-        int risultato = op1 + op2;
-        model.addAttribute("operazione", "Somma");
-        model.addAttribute("risultato", risultato);
-        return "calcolatrice";
+    @RequestMapping(params = "sum")
+    public String sum(@RequestParam(name="value1", required=true) int value1, @RequestParam(name="value2", required=true) int value2, Model model) {
+        int result = value1 + value2;
+        model.addAttribute("operation", "Sum");
+        model.addAttribute("result", result);
+        return "calculator";
     }
 
-    //	@RequestMapping("/sottrai")
     @RequestMapping(params="sottrai")
-    public String sottrai(
-            @RequestParam(name="op1", required=true) int op1,
-            @RequestParam(name="op2", required=true) int op2,
-            Model model
-    ) {
+    public String sottrai(@RequestParam(name="op1", required=true) int op1, @RequestParam(name="op2", required=true) int op2, Model model) {
         int risultato = op1 - op2;
         model.addAttribute("operazione", "Differenza");
         model.addAttribute("risultato", risultato);

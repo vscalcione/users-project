@@ -1,18 +1,17 @@
 package it.intersistemi.springframework.service.jpa;
 
-import it.intersistemi.springframework.repository.AuthorityRepository;
-import it.intersistemi.springframework.repository.GroupRepository;
-import it.intersistemi.springframework.repository.UserRepository;
 import it.intersistemi.springframework.dao.jpa.Authority;
 import it.intersistemi.springframework.dao.jpa.Group;
 import it.intersistemi.springframework.dto.AuthorityDto;
 import it.intersistemi.springframework.dto.GroupDto;
 import it.intersistemi.springframework.dto.UserDto;
-import it.intersistemi.springframework.service.GroupService;
 import it.intersistemi.springframework.mapper.AuthorityMapper;
 import it.intersistemi.springframework.mapper.GroupMapper;
 import it.intersistemi.springframework.mapper.UserMapper;
-import it.intersistemi.springframework.users.service.jpa.impl.AbstractCrudServiceJpaImpl;
+import it.intersistemi.springframework.repository.AuthorityRepository;
+import it.intersistemi.springframework.repository.GroupRepository;
+import it.intersistemi.springframework.repository.UserRepository;
+import it.intersistemi.springframework.service.GroupService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;

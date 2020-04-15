@@ -28,8 +28,8 @@ public class UserDetailsServiceImpl implements UserDetailsService {
 		if(user != null) {
 			List<AuthorityDto> authorities = userService.listAuthorities(username);
 			Collection<? extends GrantedAuthority> grantedAuthorities = authorities.stream()
-				.map(a -> new SimpleGrantedAuthority(a.getAuthority()))
-				.collect(Collectors.toSet());
+					.map(a -> new SimpleGrantedAuthority(a.getAuthority()))
+					.collect(Collectors.toSet());
 
 			return new User(user.getUserName(), user.getPassword(), user.isEnabled(), true, true, true, grantedAuthorities);
 		} else {

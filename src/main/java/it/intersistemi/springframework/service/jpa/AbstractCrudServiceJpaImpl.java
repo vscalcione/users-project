@@ -66,5 +66,4 @@ public abstract class AbstractCrudServiceJpaImpl<E, PK, DTO, R extends CrudRepos
 	}
 
 	protected abstract PK getPK(E save);
-
 }

@@ -1,6 +1,6 @@
 package it.intersistemi.springframework.dao.jdbc.spring.mapper;
 
-import it.intersistemi.springframework.users.model.UserDto;
+import it.intersistemi.springframework.dto.UserDto;
 import org.springframework.jdbc.core.RowMapper;
 
 import java.sql.ResultSet;

@@ -19,7 +19,9 @@ public class HelloWorldServlet extends HttpServlet {
 		} else {
 			helloMessage = "Hello World!!!";
 		}
-		response.getWriter().append("<!DOCTYPE html>").append("\n")
+		response.getWriter()
+				.append("<!DOCTYPE html>")
+				.append("\n")
 				.append("<html>")
 				.append("<head><title>").append(helloMessage).append("</title></head>")
 				.append("<body>")
@@ -28,5 +30,5 @@ public class HelloWorldServlet extends HttpServlet {
 				.append("</body>")
 				.append("</html>");
 	}
-
+	
 }

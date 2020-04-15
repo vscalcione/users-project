@@ -1,27 +1,32 @@
 package it.intersistemi.springframework.dto;
 
 public class EmployeeDto {
-	private Integer idMatricola;
-	private String cognome;
-	private String nome;
 
-	public Integer getIdMatricola() {
-		return idMatricola;
-	}
-	public void setIdMatricola(int idMatricola) {
-		this.idMatricola = idMatricola;
-	}
-	public String getCognome() {
-		return cognome;
-	}
-	public void setCognome(String cognome) {
-		this.cognome = cognome;
-	}
-	public String getNome() {
-		return nome;
-	}
-	public void setNome(String nome) {
-		this.nome = nome;
+	private Integer idEmployee;
+	private String employeeSurname;
+	private String employeeName;
+
+	public Integer getIdEmployee() {
+		return idEmployee;
 	}
 
+	public void setIdEmployee(Integer idEmployee) {
+		this.idEmployee = idEmployee;
+	}
+
+	public String getEmployeeSurname() {
+		return employeeSurname;
+	}
+
+	public void setEmployeeSurname(String employeeSurname) {
+		this.employeeSurname = employeeSurname;
+	}
+
+	public String getEmployeeName() {
+		return employeeName;
+	}
+
+	public void setEmployeeName(String employeeName) {
+		this.employeeName = employeeName;
+	}
 }

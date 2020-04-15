@@ -41,6 +41,5 @@ public interface EntityDtoMapper<DTO,E > {
 
 	E createEntityInstance();
 
-
 }
 

@@ -6,85 +6,83 @@ import java.util.Date;
 import java.util.Set;
 
 
-/**
- * The persistent class for the ATTIVITA database table.
- * 
- */
 @Entity
-@Table(name="ATTIVITA")
-@NamedQuery(name="Attivita.findAll", query="SELECT a FROM Attivita a")
+@Table(name="ACTIVITY")
+@NamedQuery(name="Activity.findAll", query="SELECT a FROM Activity a")
 public class Activity implements Serializable {
+
 	private static final long serialVersionUID = 1L;
 
 	@Id
-	@Column(name="ID_ATTIVITA", unique=true, nullable=false, length=36)
-	private String idAttivita;
+	@Column(name="ID_ACTIVITY", unique=true, nullable=false, length=36)
+	private String idActivity;
 
 	@Temporal(TemporalType.DATE)
-	@Column(name="DATA_FINE")
-	private Date dataFine;
+	@Column(name="END_DATE")
+	private Date endDate;
 
 	@Temporal(TemporalType.DATE)
-	@Column(name="DATA_INIZIO", nullable=false)
-	private Date dataInizio;
+	@Column(name="START_DATE", nullable=false)
+	private Date startDate;
 
-	@Column(name="NOME_ATTIVITA", nullable=false, length=100)
-	private String nomeAttivita;
+	@Column(name="ACTIVITY_NAME", nullable=false, length=100)
+	private String activityName;
+
 
 	//bi-directional many-to-many association to Dipendente
 	@ManyToMany
 	@JoinTable(
-		name="ATTIVITA_DIPENDENTE"
-		, joinColumns={
-			@JoinColumn(name="ID_ATTIVITA", nullable=false)
-			}
-		, inverseJoinColumns={
-			@JoinColumn(name="ID_MATRICOLA", nullable=false)
-			}
-		)
-	private Set<Employee> dipendentes;
+			name="EMPLOYEE_ACTIVITY"
+			, joinColumns={
+			@JoinColumn(name="ID_ACTIVITY", nullable=false)
+	}
+			, inverseJoinColumns={
+			@JoinColumn(name="ID_EMPLOYEE", nullable=false)
+	}
+	)
+	private Set<Employee> employees;
 
 	public Activity() {
 	}
 
-	public String getIdAttivita() {
-		return this.idAttivita;
+	public String getIdActivity() {
+		return idActivity;
 	}
 
-	public void setIdAttivita(String idAttivita) {
-		this.idAttivita = idAttivita;
+	public void setIdActivity(String idActivity) {
+		this.idActivity = idActivity;
 	}
 
-	public Date getDataFine() {
-		return this.dataFine;
+	public Date getEndDate() {
+		return endDate;
 	}
 
-	public void setDataFine(Date dataFine) {
-		this.dataFine = dataFine;
+	public void setEndDate(Date endDate) {
+		this.endDate = endDate;
 	}
 
-	public Date getDataInizio() {
-		return this.dataInizio;
+	public Date getStartDate() {
+		return startDate;
 	}
 
-	public void setDataInizio(Date dataInizio) {
-		this.dataInizio = dataInizio;
+	public void setStartDate(Date startDate) {
+		this.startDate = startDate;
 	}
 
-	public String getNomeAttivita() {
-		return this.nomeAttivita;
+	public String getActivityName() {
+		return activityName;
 	}
 
-	public void setNomeAttivita(String nomeAttivita) {
-		this.nomeAttivita = nomeAttivita;
+	public void setActivityName(String activityName) {
+		this.activityName = activityName;
 	}
 
-	public Set<Employee> getDipendentes() {
-		return this.dipendentes;
+	public Set<Employee> getEmployees() {
+		return employees;
 	}
 
-	public void setDipendentes(Set<Employee> dipendentes) {
-		this.dipendentes = dipendentes;
+	public void setEmployees(Set<Employee> employees) {
+		this.employees = employees;
 	}
-
 }
+

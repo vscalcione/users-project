@@ -4,10 +4,10 @@ import it.intersistemi.springframework.dto.ActivityDto;
 
 public interface ActivityService extends CrudService<ActivityDto, String> {
 
-	public Iterable<ActivityDto> listaAttivitaDipendente(Integer matrDipendente);
+	public Iterable<ActivityDto> employeeActivitiesList(Integer idEmployee);
 
-	public void assegnaAttivitaDipendente(String idAttivita, Integer idMatricola);
+	public void assignEmployeeActivity(String idActivity, Integer idEmployee);
 
-	public void rimuoviAttivitaDipendente(String idAttivita, Integer idMatricola);
+	public void removeEmployeeActivity(String idActivity, Integer idEmployee);
 
 }
