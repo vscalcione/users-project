@@ -1,7 +1,7 @@
 package it.intersistemi.spring.rest;
 
-import it.intersistemi.corso.users.model.UserDto;
-import it.intersistemi.corso.users.service.UserService;
+import it.intersistemi.springframework.users.model.UserDto;
+import it.intersistemi.springframework.users.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;

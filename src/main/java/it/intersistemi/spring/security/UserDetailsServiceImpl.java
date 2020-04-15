@@ -1,8 +1,8 @@
 package it.intersistemi.spring.security;
 
-import it.intersistemi.corso.users.model.AuthorityDto;
-import it.intersistemi.corso.users.model.UserDto;
-import it.intersistemi.corso.users.service.UserService;
+import it.intersistemi.springframework.users.model.AuthorityDto;
+import it.intersistemi.springframework.users.model.UserDto;
+import it.intersistemi.springframework.users.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;

@@ -1,7 +1,7 @@
 package it.intersistemi.spring.service;
 
-import it.intersistemi.corso.service.CrudService;
-import it.intersistemi.corso.dto.EmployeeDto;
+import it.intersistemi.springframework.service.CrudService;
+import it.intersistemi.springframework.dto.EmployeeDto;
 
 public interface EmployeeService extends CrudService<EmployeeDto, Integer> {
 

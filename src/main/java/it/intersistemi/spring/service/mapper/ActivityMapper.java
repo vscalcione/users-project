@@ -1,8 +1,7 @@
 package it.intersistemi.spring.service.mapper;
 
-import it.intersistemi.corso.entity.Activity;
-import it.intersistemi.corso.dao.ActivityDto;
-import it.intersistemi.springframework.todo.service.mapper.EntityDtoMapper;
+import it.intersistemi.springframework.entity.Activity;
+import it.intersistemi.springframework.dao.ActivityDto;
 import org.springframework.stereotype.Component;
 
 @Component

@@ -1,6 +1,6 @@
 package it.intersistemi.spring.repository;
 
-import it.intersistemi.corso.entity.Employee;
+import it.intersistemi.springframework.entity.Employee;
 import org.springframework.data.repository.CrudRepository;
 
 public interface EmployeeRepository extends CrudRepository<Employee, Integer> {

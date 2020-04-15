@@ -1,6 +1,6 @@
 package it.intersistemi.spring.entity;
 
-import it.intersistemi.corso.entity.Activity;
+import it.intersistemi.springframework.entity.Activity;
 
 import javax.persistence.*;
 import java.io.Serializable;
@@ -27,7 +27,7 @@ public class Employee implements Serializable {
 
 	//bi-directional many-to-many association to Attivita
 	@ManyToMany(mappedBy="employees")
-	private Set<it.intersistemi.corso.entity.Activity> activities;
+	private Set<it.intersistemi.springframework.entity.Activity> activities;
 
 	public Employee() {
 	}
@@ -56,7 +56,7 @@ public class Employee implements Serializable {
 		this.employeeName = employeeName;
 	}
 
-	public Set<it.intersistemi.corso.entity.Activity> getActivities() {
+	public Set<it.intersistemi.springframework.entity.Activity> getActivities() {
 		return activities;
 	}
 

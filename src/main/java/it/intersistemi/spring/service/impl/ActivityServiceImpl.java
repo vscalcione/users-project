@@ -1,11 +1,10 @@
 package it.intersistemi.spring.service.impl;
 
-import it.intersistemi.corso.entity.Activity;
-import it.intersistemi.corso.entity.Employee;
-import it.intersistemi.corso.dao.ActivityDto;
-import it.intersistemi.corso.repository.ActivityRepository;
-import it.intersistemi.corso.repository.EmployeeRepository;
-import it.intersistemi.springframework.todo.service.impl.AbstractCrudServiceJpaImpl;
+import it.intersistemi.springframework.entity.Activity;
+import it.intersistemi.springframework.entity.Employee;
+import it.intersistemi.springframework.dao.ActivityDto;
+import it.intersistemi.springframework.repository.ActivityRepository;
+import it.intersistemi.springframework.repository.EmployeeRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;

@@ -1,7 +1,7 @@
 package it.intersistemi.spring.controller;
 
 
-import it.intersistemi.corso.dao.ActivityDto;
+import it.intersistemi.springframework.dao.ActivityDto;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.propertyeditors.CustomDateEditor;
 import org.springframework.stereotype.Controller;

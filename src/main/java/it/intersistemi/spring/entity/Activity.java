@@ -1,6 +1,6 @@
 package it.intersistemi.spring.entity;
 
-import it.intersistemi.corso.entity.Employee;
+import it.intersistemi.springframework.entity.Employee;
 
 import javax.persistence.*;
 import java.io.Serializable;

@@ -1,6 +1,6 @@
 package it.intersistemi.spring.repository;
 
-import it.intersistemi.corso.entity.Activity;
+import it.intersistemi.springframework.entity.Activity;
 
 public interface ActivityRepository extends CrudRepository<Activity, String>{
 

@@ -1,7 +1,7 @@
 package it.intersistemi.spring.service;
 
-import it.intersistemi.corso.dao.ActivityDto;
-import it.intersistemi.corso.service.CrudService;
+import it.intersistemi.springframework.dao.ActivityDto;
+import it.intersistemi.springframework.service.CrudService;
 
 public interface ActivityService extends CrudService<ActivityDto, String> {
 

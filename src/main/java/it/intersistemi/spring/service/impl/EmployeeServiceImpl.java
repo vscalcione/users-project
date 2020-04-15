@@ -1,9 +1,8 @@
 package it.intersistemi.spring.service.impl;
 
-import it.intersistemi.corso.entity.Employee;
-import it.intersistemi.corso.dao.EmployeeDto;
-import it.intersistemi.corso.repository.EmployeeRepository;
-import it.intersistemi.springframework.todo.service.impl.AbstractCrudServiceJpaImpl;
+import it.intersistemi.springframework.entity.Employee;
+import it.intersistemi.springframework.dao.EmployeeDto;
+import it.intersistemi.springframework.repository.EmployeeRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

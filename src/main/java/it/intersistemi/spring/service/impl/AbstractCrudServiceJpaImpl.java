@@ -1,7 +1,5 @@
 package it.intersistemi.spring.service.impl;
 
-import it.intersistemi.springframework.todo.service.CrudService;
-import it.intersistemi.springframework.todo.service.mapper.EntityDtoMapper;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.transaction.annotation.Transactional;
 

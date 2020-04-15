@@ -1,6 +1,6 @@
 package it.intersistemi.spring.controller;
 
-import it.intersistemi.corso.service.CrudService;
+import it.intersistemi.springframework.service.CrudService;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
