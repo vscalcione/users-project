@@ -1,6 +1,6 @@
 package it.intersistemi.corso.mapper;
 
-import it.intersistemi.corso.model.entity.jpa.Group;
+import it.intersistemi.corso.dao.jpa.Group;
 import it.intersistemi.corso.dto.GroupDto;
 import org.springframework.stereotype.Component;
 

@@ -1,9 +1,9 @@
-package it.intersistemi.springframework.todo.repository;
+package it.intersistemi.corso.repository;
 
 import it.intersistemi.corso.gestioneAttivita.entity.Attivita;
 import org.springframework.data.repository.CrudRepository;
 
-public interface AttivitaRepository extends CrudRepository<Attivita, String> {
+public interface ActivityRepository extends CrudRepository<Attivita, String> {
 
 	Iterable<Attivita> findByDipendentesIdMatricola(Integer idMatricola);
 }

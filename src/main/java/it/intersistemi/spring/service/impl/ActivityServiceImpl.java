@@ -2,7 +2,7 @@ package it.intersistemi.spring.service.impl;
 
 import it.intersistemi.corso.entity.Activity;
 import it.intersistemi.corso.entity.Employee;
-import it.intersistemi.corso.model.ActivityDto;
+import it.intersistemi.corso.dao.ActivityDto;
 import it.intersistemi.corso.repository.ActivityRepository;
 import it.intersistemi.corso.repository.EmployeeRepository;
 import it.intersistemi.springframework.todo.service.impl.AbstractCrudServiceJpaImpl;

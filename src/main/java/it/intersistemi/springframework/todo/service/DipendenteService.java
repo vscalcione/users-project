@@ -1,6 +1,6 @@
 package it.intersistemi.springframework.todo.service;
 
-import it.intersistemi.springframework.todo.model.EmployeeDto;
+import it.intersistemi.corso.dto.EmployeeDto;
 
 public interface DipendenteService extends CrudService<EmployeeDto, Integer> {
 

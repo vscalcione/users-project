@@ -1,6 +1,6 @@
 package it.intersistemi.corso.repository;
 
-import it.intersistemi.corso.model.entity.jpa.User;
+import it.intersistemi.corso.dao.jpa.User;
 import org.springframework.data.repository.CrudRepository;
 
 import java.util.Optional;

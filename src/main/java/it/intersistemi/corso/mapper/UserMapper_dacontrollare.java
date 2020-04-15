@@ -1,6 +1,6 @@
 package it.intersistemi.corso.mapper;
 
-import it.intersistemi.corso.model.entity.jpa.User_dacontrollare;
+import it.intersistemi.corso.dao.jpa.User_dacontrollare;
 import it.intersistemi.corso.dto.UserDTO;
 
 public class UserMapper_dacontrollare implements EntityToDtoMapper<UserDTO, User_dacontrollare> {

@@ -1,7 +1,7 @@
 package it.intersistemi.springframework.todo.service.mapper;
 
 import it.intersistemi.corso.gestioneAttivita.entity.Dipendente;
-import it.intersistemi.springframework.todo.model.EmployeeDto;
+import it.intersistemi.corso.dto.EmployeeDto;
 import org.springframework.stereotype.Component;
 
 @Component

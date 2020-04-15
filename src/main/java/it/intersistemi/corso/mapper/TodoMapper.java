@@ -1,6 +1,6 @@
 package it.intersistemi.corso.mapper;
 
-import it.intersistemi.corso.model.entity.jpa.TodoList;
+import it.intersistemi.corso.dao.jpa.TodoList;
 import it.intersistemi.corso.dto.TodoDTO;
 
 public class TodoMapper implements EntityToDtoMapper<TodoDTO, TodoList> {

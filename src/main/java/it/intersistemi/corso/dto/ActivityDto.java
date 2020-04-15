@@ -1,8 +1,8 @@
-package it.intersistemi.springframework.todo.model;
+package it.intersistemi.corso.dto;
 
 import java.util.Date;
 
-public class AttivitaDto {
+public class ActivityDto {
 	private String idAttivita;
 	private Date dataFine;
 	private Date dataInizio;

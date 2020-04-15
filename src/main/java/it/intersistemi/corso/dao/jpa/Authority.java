@@ -1,4 +1,4 @@
-package it.intersistemi.corso.model.entity.jpa;
+package it.intersistemi.corso.dao.jpa;
 
 import javax.persistence.*;
 import java.io.Serializable;

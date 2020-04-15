@@ -1,14 +1,14 @@
 package it.intersistemi.springframework.todo.service.mapper;
 
 import it.intersistemi.corso.gestioneAttivita.entity.Attivita;
-import it.intersistemi.springframework.todo.model.AttivitaDto;
+import it.intersistemi.corso.dto.ActivityDto;
 import org.springframework.stereotype.Component;
 
 @Component
-public class AttivitaMapper implements EntityDtoMapper<AttivitaDto, Attivita> {
+public class AttivitaMapper implements EntityDtoMapper<ActivityDto, Attivita> {
 
 	@Override
-	public void entityToDto(Attivita e, AttivitaDto dto) {
+	public void entityToDto(Attivita e, ActivityDto dto) {
 		dto.setIdAttivita(e.getIdAttivita());
 		dto.setNomeAttivita(e.getNomeAttivita());
 		dto.setDataInizio(e.getDataInizio());
@@ -17,7 +17,7 @@ public class AttivitaMapper implements EntityDtoMapper<AttivitaDto, Attivita> {
 	}
 
 	@Override
-	public void dtoToEntity(AttivitaDto dto, Attivita e) {
+	public void dtoToEntity(ActivityDto dto, Attivita e) {
 		e.setIdAttivita(dto.getIdAttivita());
 		e.setNomeAttivita(dto.getNomeAttivita());
 		e.setDataInizio(dto.getDataInizio());
@@ -25,8 +25,8 @@ public class AttivitaMapper implements EntityDtoMapper<AttivitaDto, Attivita> {
 	}
 
 	@Override
-	public AttivitaDto createDtoInstance() {
-		return new AttivitaDto();
+	public ActivityDto createDtoInstance() {
+		return new ActivityDto();
 	}
 
 	@Override

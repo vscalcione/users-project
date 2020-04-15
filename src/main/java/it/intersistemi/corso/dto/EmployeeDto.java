@@ -1,4 +1,4 @@
-package it.intersistemi.springframework.todo.model;
+package it.intersistemi.corso.dto;
 
 public class EmployeeDto {
 	private Integer idMatricola;

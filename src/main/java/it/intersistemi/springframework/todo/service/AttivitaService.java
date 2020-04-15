@@ -1,10 +1,10 @@
 package it.intersistemi.springframework.todo.service;
 
-import it.intersistemi.springframework.todo.model.AttivitaDto;
+import it.intersistemi.corso.dto.ActivityDto;
 
-public interface AttivitaService extends CrudService<AttivitaDto, String> {
+public interface AttivitaService extends CrudService<ActivityDto, String> {
 
-	public Iterable<AttivitaDto> listaAttivitaDipendente(Integer matrDipendente);
+	public Iterable<ActivityDto> listaAttivitaDipendente(Integer matrDipendente);
 
 	public void assegnaAttivitaDipendente(String idAttivita, Integer idMatricola);
 

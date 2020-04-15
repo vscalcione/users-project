@@ -1,8 +1,8 @@
 package it.intersistemi.springframework.todo.service.impl;
 
 import it.intersistemi.corso.gestioneAttivita.entity.Dipendente;
-import it.intersistemi.springframework.todo.model.EmployeeDto;
-import it.intersistemi.springframework.todo.repository.DipendenteRepository;
+import it.intersistemi.corso.dto.EmployeeDto;
+import it.intersistemi.corso.repository.EmployeeRepository;
 import it.intersistemi.springframework.todo.service.DipendenteService;
 import it.intersistemi.springframework.todo.service.mapper.DipendenteMapper;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -10,11 +10,11 @@ import org.springframework.stereotype.Service;
 
 @Service
 public class DipendenteServiceImpl
-	extends AbstractCrudServiceJpaImpl<Dipendente, Integer, EmployeeDto, DipendenteRepository, DipendenteMapper>
+	extends AbstractCrudServiceJpaImpl<Dipendente, Integer, EmployeeDto, EmployeeRepository, DipendenteMapper>
 	implements DipendenteService {
 
 	@Autowired
-	protected DipendenteServiceImpl(DipendenteRepository repository, DipendenteMapper mapper) {
+	protected DipendenteServiceImpl(EmployeeRepository repository, DipendenteMapper mapper) {
 		super(repository, mapper);
 	}
 

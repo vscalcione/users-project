@@ -1,6 +1,6 @@
 package it.intersistemi.corso.mapper;
 
-import it.intersistemi.corso.model.entity.jpa.Authority;
+import it.intersistemi.corso.dao.jpa.Authority;
 import it.intersistemi.corso.dto.AuthorityDto;
 import org.springframework.stereotype.Component;
 

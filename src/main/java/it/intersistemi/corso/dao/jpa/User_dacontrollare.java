@@ -1,6 +1,4 @@
-package it.intersistemi.corso.model.entity.jpa;
-
-import it.intersistemi.corso.model.entity.jpa.TodoList;
+package it.intersistemi.corso.dao.jpa;
 
 import javax.persistence.*;
 import java.io.Serializable;

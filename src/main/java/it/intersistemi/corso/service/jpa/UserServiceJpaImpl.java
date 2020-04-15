@@ -2,8 +2,8 @@ package it.intersistemi.corso.service.jpa;
 
 import it.intersistemi.corso.repository.AuthorityRepository;
 import it.intersistemi.corso.repository.UserRepository;
-import it.intersistemi.corso.model.entity.jpa.Authority;
-import it.intersistemi.corso.model.entity.jpa.User;
+import it.intersistemi.corso.dao.jpa.Authority;
+import it.intersistemi.corso.dao.jpa.User;
 import it.intersistemi.corso.dto.AuthorityDto;
 import it.intersistemi.corso.dto.UserDto;
 import it.intersistemi.corso.service.UserService;

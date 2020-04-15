@@ -1,6 +1,6 @@
 package it.intersistemi.corso.mapper;
 
-import it.intersistemi.corso.model.entity.jpa.User;
+import it.intersistemi.corso.dao.jpa.User;
 import it.intersistemi.corso.dto.UserDto;
 import org.springframework.stereotype.Component;
 

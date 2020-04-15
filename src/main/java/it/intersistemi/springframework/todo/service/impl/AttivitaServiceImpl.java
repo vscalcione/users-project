@@ -2,9 +2,9 @@ package it.intersistemi.springframework.todo.service.impl;
 
 import it.intersistemi.corso.gestioneAttivita.entity.Attivita;
 import it.intersistemi.corso.gestioneAttivita.entity.Dipendente;
-import it.intersistemi.springframework.todo.model.AttivitaDto;
-import it.intersistemi.springframework.todo.repository.AttivitaRepository;
-import it.intersistemi.springframework.todo.repository.DipendenteRepository;
+import it.intersistemi.corso.dto.ActivityDto;
+import it.intersistemi.corso.repository.ActivityRepository;
+import it.intersistemi.corso.repository.EmployeeRepository;
 import it.intersistemi.springframework.todo.service.AttivitaService;
 import it.intersistemi.springframework.todo.service.mapper.AttivitaMapper;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -15,14 +15,14 @@ import java.util.UUID;
 
 @Service
 public class AttivitaServiceImpl
-	extends AbstractCrudServiceJpaImpl<Attivita, String, AttivitaDto, AttivitaRepository, AttivitaMapper>
+	extends AbstractCrudServiceJpaImpl<Attivita, String, ActivityDto, ActivityRepository, AttivitaMapper>
 	implements AttivitaService {
 
 	@Autowired
-	private DipendenteRepository dipendenteRepository;
+	private EmployeeRepository dipendenteRepository;
 
 	@Autowired
-	protected AttivitaServiceImpl(AttivitaRepository repository, AttivitaMapper mapper) {
+	protected AttivitaServiceImpl(ActivityRepository repository, AttivitaMapper mapper) {
 		super(repository, mapper);
 	}
 
@@ -33,14 +33,14 @@ public class AttivitaServiceImpl
 
 	@Transactional
 	@Override
-	public String insert(AttivitaDto dto) {
+	public String insert(ActivityDto dto) {
 		dto.setIdAttivita(UUID.randomUUID().toString());
 		return super.insert(dto);
 	}
 
 	@Transactional
 	@Override
-	public Iterable<AttivitaDto> listaAttivitaDipendente(Integer matrDipendente) {
+	public Iterable<ActivityDto> listaAttivitaDipendente(Integer matrDipendente) {
 		return super.mapper.entityToDto(super.repository.findByDipendentesIdMatricola(matrDipendente));
 	}
 
